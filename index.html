@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,17 +6,8 @@
 
     <title>Untuk Kamu ❤️</title>
 
-    <!-- CSS utama -->
     <link href="css/main.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
-
-    <!-- Preload hanya jika file gambarnya memang ada -->
-    <!--
-    <link rel="preload" href="img/foto1.jpg" as="image">
-    <link rel="preload" href="img/foto2.jpg" as="image">
-    -->
 </head>
 
 <body>
@@ -33,7 +23,6 @@
 
         <!-- CHAT BODY -->
         <div id="mobile-body">
-
             <div id="mobile-body-bg"></div>
 
             <div id="mobile-body-content">
@@ -92,9 +81,13 @@
                 <div id="prompt-body">
 
                     <!-- Response choices -->
-                    <ul class="responses" v-if="lastDialog && lastDialog.responses">
+                    <ul
+                        class="responses"
+                        v-if="lastDialog && lastDialog.responses">
 
-                        <li v-for="res in lastDialog.responses" :key="res.content">
+                        <li
+                            v-for="res in lastDialog.responses"
+                            :key="res.content">
 
                             <a
                                 href="javascript:;"
@@ -170,13 +163,18 @@
         </a>
     </div>
 
-    <!-- JavaScript libraries -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.2.6/vue.min.js"></script>
+
+    <!--
+        IMPORTANT:
+        Gunakan library lokal dari repository,
+        bukan CDN eksternal.
+    -->
+
+    <script src="lib/zepto.min.js"></script>
+    <script src="lib/vue.min.js"></script>
 
     <!-- Website logic -->
     <script src="js/index.js"></script>
 
 </body>
 </html>
-```
